@@ -9,19 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="logo">
             <img src="images/logo.avif" alt="Yard Guard Landscaping">
         </div>
-        <button class="hamburger" aria-label="Toggle menu">
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <div class="nav-links">
+        <div class="nav-links" id="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About Us</a>
-            <div class="dropdown">
+            <div class="dropdown" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
                 <a href="#">Our Services ▾</a>
                 <div class="dropdown-content">
                     <a href="commercial.html">Commercial</a>
@@ -34,9 +35,10 @@
         </div>
     </nav>
 
-    <section class="hero">
+    <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-            <h1>Professional Green Spaces – Year-Round Perfection for Your Business</h1>
+            <h1 id="hero-title">Professional Green Spaces – Year-Round Perfection for Your Business</h1>
             <p>Impress clients and reduce maintenance costs with our premium artificial turf solutions. Perfect for commercial properties, office complexes, and residential spaces. Experience lush, eco-friendly grounds that stay green in every season – no mowing, no watering, no worries.</p>
             <div class="hero-cta-group">
                 <a href="contact.html" class="cta-button primary">Get Commercial Project Quote</a>
@@ -44,10 +46,11 @@
             </div>
         </div>
     </section>
+    </main>
 
-    <section class="benefits-section">
+    <section class="benefits-section" aria-labelledby="benefits-title">
         <div class="container">
-            <h2>Smart Investment, Lasting Results</h2>
+            <h2 id="benefits-title">Smart Investment, Lasting Results</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <h3>Reduce Costs</h3>
@@ -68,7 +71,7 @@
         </div>
     </section>
 
-    <section class="trust-section">
+    <section class="trust-section" aria-label="Trust indicators and company credentials">
         <div class="container">
             <div class="trust-indicators">
                 <div class="trust-item">
@@ -90,9 +93,9 @@
         </div>
     </section>
 
-    <section class="cta-section">
+    <section class="cta-section" aria-labelledby="cta-title">
         <div class="container">
-            <h2>Ready to Transform Your Property?</h2>
+            <h2 id="cta-title">Ready to Transform Your Property?</h2>
             <p>Schedule a free consultation and discover how artificial turf can enhance your space while reducing costs.</p>
             <div class="cta-buttons">
                 <a href="contact.html" class="get-quote-btn">Request Free Quote</a>
@@ -134,16 +137,45 @@
     </footer>
 
     <script>
+        // Enhanced hamburger menu with ARIA support
         document.querySelector('.hamburger').addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const navLinks = document.querySelector('.nav-links');
+            
             this.classList.toggle('active');
-            document.querySelector('.nav-links').classList.toggle('active');
+            navLinks.classList.toggle('active');
+            
+            // Update ARIA attributes
+            this.setAttribute('aria-expanded', !isExpanded);
+            navLinks.setAttribute('aria-hidden', isExpanded);
         });
 
-        // Handle dropdown menu on mobile
-        document.querySelector('.dropdown > a').addEventListener('click', function(e) {
+        // Handle dropdown menu with keyboard support
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownToggle = dropdown.querySelector('a');
+        
+        dropdownToggle.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
-                this.parentElement.classList.toggle('active');
+                const isExpanded = dropdown.getAttribute('aria-expanded') === 'true';
+                dropdown.classList.toggle('active');
+                dropdown.setAttribute('aria-expanded', !isExpanded);
+            }
+        });
+        
+        // Keyboard navigation for dropdown
+        dropdown.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                dropdownToggle.click();
+            }
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+                dropdown.setAttribute('aria-expanded', 'false');
             }
         });
     </script>
