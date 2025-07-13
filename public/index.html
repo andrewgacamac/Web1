@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Professional Artificial Turf Solutions | Commercial & Residential Landscaping</title>
+    <meta name="description" content="Transform your property with eco-friendly artificial turf. Save on maintenance costs while maintaining a pristine appearance year-round. Trusted by businesses and homeowners across the GTA.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.avif" alt="Yard Guard Landscaping">
+        </div>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <div class="dropdown">
+                <a href="#">Our Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="commercial.html">Commercial</a>
+                    <a href="residential.html">Residential</a>
+                </div>
+            </div>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Professional Green Spaces – Year-Round Perfection for Your Business</h1>
+            <p>Impress clients and reduce maintenance costs with our premium artificial turf solutions. Perfect for commercial properties, office complexes, and residential spaces. Experience lush, eco-friendly grounds that stay green in every season – no mowing, no watering, no worries.</p>
+            <div class="hero-cta-group">
+                <a href="contact.html" class="cta-button primary">Get Commercial Project Quote</a>
+                <a href="residential.html" class="cta-button secondary">Residential Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Smart Investment, Lasting Results</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Reduce Costs</h3>
+                    <p>Save up to 75% on annual maintenance costs. No mowing, watering, or fertilizing required.</p>
+                    <div class="stat">$2,000+ saved yearly per 1,000 sq ft</div>
+                </div>
+                <div class="benefit-card">
+                    <h3>Eco-Friendly</h3>
+                    <p>Conserve water and eliminate chemical usage while maintaining perfect green spaces.</p>
+                    <div class="stat">600+ gallons of water saved weekly per 1,000 sq ft</div>
+                </div>
+                <div class="benefit-card">
+                    <h3>Professional Appeal</h3>
+                    <p>Make a lasting impression with pristine landscaping that stays perfect year-round.</p>
+                    <div class="stat">15-20 year lifespan guarantee</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <span class="trust-icon">✓</span>
+                    <h3>15+ Years Experience</h3>
+                    <p>Serving the GTA since 2010</p>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">⚡</span>
+                    <h3>Expert Installation</h3>
+                    <p>Certified professionals</p>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">🏆</span>
+                    <h3>Satisfaction Guaranteed</h3>
+                    <p>Join our satisfied clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Property?</h2>
+            <p>Schedule a free consultation and discover how artificial turf can enhance your space while reducing costs.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="get-quote-btn">Request Free Quote</a>
+                <a href="tel:6472167787" class="call-now-btn">Call (647) 216-7787</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.avif" alt="Yard Guard Landscaping" style="height: 50px; width: auto;">
+            </div>
+            <div class="footer-about">
+                <h3>ABOUT US</h3>
+                <p>With over 15 years of experience in the GTA, we bring expert knowledge in landscape design and installation. Our team is dedicated to delivering top-notch quality and customer satisfaction with every project.</p>
+            </div>
+            <div class="footer-links">
+                <h3>INFORMATION LINKS</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="commercial.html">Commercial Services</a></li>
+                    <li><a href="residential.html">Residential Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>CONTACT US</h3>
+                <p>Address: Toronto, ON</p>
+                <p>Phone: <a href="tel:6472167787">(647) 216-7787</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Handle dropdown menu on mobile
+        document.querySelector('.dropdown > a').addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle('active');
+            }
+        });
+    </script>
+</body>
+</html>

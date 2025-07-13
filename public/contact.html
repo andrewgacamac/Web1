@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Contact Us | Free Artificial Turf Consultation GTA</title>
+    <meta name="description" content="Get a free consultation for artificial turf installation in the Greater Toronto Area. Expert advice for residential and commercial properties. Quick response guaranteed.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.avif" alt="Yard Guard Landscaping">
+        </div>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <div class="dropdown">
+                <a href="#">Our Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="residential.html">Residential</a>
+                    <a href="commercial.html">Commercial</a>
+                </div>
+            </div>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html" class="active">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h1>Start Your Transformation Today</h1>
+            <p>Get expert advice and a free consultation for your artificial turf project</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <h3>Free Consultation</h3>
+                            <p>No obligation quote and expert advice</p>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">⚡</span>
+                            <h3>Quick Response</h3>
+                            <p>Reply within 24 hours guaranteed</p>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">🏆</span>
+                            <h3>15+ Years Experience</h3>
+                            <p>Trusted by homeowners and businesses</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-details">
+                        <h2>How to Reach Us</h2>
+                        <div class="contact-method">
+                            <h3>📞 Phone</h3>
+                            <p>Call us: <a href="tel:6472167787">(647) 216-7787</a></p>
+                            <p class="detail-note">Available Mon-Fri, 8AM-6PM</p>
+                        </div>
+
+                        <div class="contact-method">
+                            <h3>📍 Service Area</h3>
+                            <p>Greater Toronto Area (GTA)</p>
+                            <ul class="service-areas">
+                                <li>Toronto</li>
+                                <li>Mississauga</li>
+                                <li>Markham</li>
+                                <li>Vaughan</li>
+                                <li>Richmond Hill</li>
+                                <li>Oakville</li>
+                            </ul>
+                        </div>
+
+                        <div class="contact-method">
+                            <h3>⏰ Business Hours</h3>
+                            <ul class="business-hours">
+                                <li><span>Monday - Friday:</span> 8:00 AM - 6:00 PM</li>
+                                <li><span>Saturday:</span> By appointment</li>
+                                <li><span>Sunday:</span> Closed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Request Free Consultation</h2>
+                    <p class="form-intro">Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form id="consultationForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required 
+                                   aria-required="true" autocomplete="name">
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required 
+                                   aria-required="true" autocomplete="email">
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required 
+                                   aria-required="true" autocomplete="tel">
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="propertyType">Property Type *</label>
+                                <select id="propertyType" name="propertyType" required aria-required="true">
+                                    <option value="">Select Type</option>
+                                    <option value="residential">Residential</option>
+                                    <option value="commercial">Commercial</option>
+                                </select>
+                                <span class="error-message" id="propertyTypeError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="projectSize">Approximate Size</label>
+                                <select id="projectSize" name="projectSize">
+                                    <option value="">Select Size</option>
+                                    <option value="small">Small (Under 500 sq ft)</option>
+                                    <option value="medium">Medium (500-2000 sq ft)</option>
+                                    <option value="large">Large (Over 2000 sq ft)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                    aria-required="true" placeholder="Tell us about your project..."></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" id="newsletter">
+                                Keep me updated with landscaping tips and special offers
+                            </label>
+                        </div>
+
+                        <div id="formMessage" class="form-message" style="display: none;"></div>
+                        
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            Request Free Consultation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2>Our Service Area</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184552.57289742303!2d-79.51814099999999!3d43.718403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1635789876543!5m2!1sen!2sca" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="Map of our service area in Greater Toronto Area">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.avif" alt="Yard Guard Landscaping" style="height: 50px; width: auto;">
+            </div>
+            <div class="footer-about">
+                <h3>ABOUT US</h3>
+                <p>With over 15 years of experience in the GTA, we bring expert knowledge in landscape design and installation. Our team is dedicated to delivering top-notch quality and customer satisfaction with every project.</p>
+            </div>
+            <div class="footer-links">
+                <h3>INFORMATION LINKS</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="residential.html">Residential Services</a></li>
+                    <li><a href="commercial.html">Commercial Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>CONTACT US</h3>
+                <p>Address: Toronto, ON</p>
+                <p>Phone: <a href="tel:6472167787">(647) 216-7787</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Handle dropdown menu on mobile
+        document.querySelector('.dropdown > a').addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle('active');
+            }
+        });
+
+        // Form validation and submission
+        const form = document.getElementById('consultationForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function showError(fieldId, message) {
+            const errorElement = document.getElementById(fieldId + 'Error');
+            errorElement.textContent = message;
+            document.getElementById(fieldId).classList.add('error');
+        }
+
+        function clearError(fieldId) {
+            const errorElement = document.getElementById(fieldId + 'Error');
+            errorElement.textContent = '';
+            document.getElementById(fieldId).classList.remove('error');
+        }
+
+        function showFormMessage(message, type) {
+            const messageElement = document.getElementById('formMessage');
+            messageElement.textContent = message;
+            messageElement.className = `form-message ${type}`;
+            messageElement.style.display = 'block';
+
+            if (type === 'success') {
+                messageElement.style.color = 'var(--primary-color)';
+                setTimeout(() => {
+                    messageElement.style.display = 'none';
+                }, 5000);
+            } else {
+                messageElement.style.color = '#dc3545';
+            }
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            // Clear previous errors
+            ['name', 'email', 'phone', 'propertyType', 'message'].forEach(clearError);
+
+            // Validate required fields
+            if (!form.name.value.trim()) {
+                showError('name', 'Name is required');
+                isValid = false;
+            }
+
+            if (!form.email.value.trim()) {
+                showError('email', 'Email is required');
+                isValid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.value)) {
+                showError('email', 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            if (!form.phone.value.trim()) {
+                showError('phone', 'Phone number is required');
+                isValid = false;
+            }
+
+            if (!form.propertyType.value) {
+                showError('propertyType', 'Please select property type');
+                isValid = false;
+            }
+
+            if (!form.message.value.trim()) {
+                showError('message', 'Please provide project details');
+                isValid = false;
+            }
+
+            if (!isValid) {
+                showFormMessage('Please correct the errors above', 'error');
+                return;
+            }
+
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: form.name.value,
+                        email: form.email.value,
+                        phone: form.phone.value,
+                        propertyType: form.propertyType.value,
+                        projectSize: form.projectSize.value,
+                        message: form.message.value,
+                        newsletter: form.newsletter.checked
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showFormMessage('Thank you! We\'ll contact you within 24 hours.', 'success');
+                    form.reset();
+                } else {
+                    showFormMessage(result.error || 'Failed to send message. Please try again.', 'error');
+                }
+            } catch (error) {
+                showFormMessage('An error occurred. Please try again later.', 'error');
+            }
+
+            // Re-enable submit button
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Request Free Consultation';
+        });
+
+        // Clear errors on input
+        form.querySelectorAll('input, select, textarea').forEach(element => {
+            element.addEventListener('input', () => {
+                clearError(element.id);
+            });
+        });
+    </script>
+</body>
+</html>

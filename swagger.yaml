@@ -1,0 +1,70 @@
+openapi: 3.0.0
+info:
+  title: Web2 API
+  version: '1.0.0'
+  description: API documentation for Web2 application
+
+servers:
+  - url: http://localhost:3000/api/v1
+    description: Local development server
+
+paths:
+  /:
+    get:
+      summary: Get home page
+      responses:
+        '200':
+          description: Successfully returns home page
+        '500':
+          description: Internal server error
+  
+  /about:
+    get:
+      summary: Get about page
+      responses:
+        '200':
+          description: Successfully returns about page
+        '500':
+          description: Internal server error
+  
+  /contact:
+    get:
+      summary: Get contact page
+      responses:
+        '200':
+          description: Successfully returns contact page
+        '500':
+          description: Internal server error
+  
+  /faq:
+    get:
+      summary: Get FAQ page
+      responses:
+        '200':
+          description: Successfully returns FAQ page
+        '500':
+          description: Internal server error
+  
+  /portfolio:
+    get:
+      summary: Get portfolio page
+      responses:
+        '200':
+          description: Successfully returns portfolio page
+        '500':
+          description: Internal server error
+
+components:
+  schemas: {}
+  
+  responses:
+    Error:
+      description: Error response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                description: Error message

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>About Us - Yard Guard Landscaping</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.avif" alt="Yard Guard Landscaping">
+        </div>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Us</a>
+            <div class="dropdown">
+                <a href="#">Our Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="residential.html">Residential</a>
+                    <a href="commercial.html">Commercial</a>
+                </div>
+            </div>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    </nav>
+
+    <section class="about-hero">
+        <h1>YARD GUARD LANDSCAPING</h1>
+    </section>
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>YARD GUARD LANDSCAPING is a team of innovating landscape design professionals, striving towards being a leader in the landscaping industry. Servicing GTA and surrounding areas for 15+ years, this young but mighty company has been designing and building functional living outdoor spaces for all types of yards. Whether big or small we can design something to fit all your needs! Not only do we create but we are professionals in maintaining yards with the most detail. Check out our gallery and 3D design projects to see what we can do. We would love the opportunity to quote you on your next project.</p>
+                
+                <h3>Meet Michael Kasowski</h3>
+                <div class="about-owner">
+                    <img src="images/Owner.avif" alt="Michael Kasowski - Owner of Yard Guard Landscaping">
+                    <p>My passion for landscaping started at a young age. My father operated a small successful landscaping company and growing up I was very involved in the family business. I pursued this passion by achieving a diploma in Horticulture Science and Landscape Design from Humber College. It was there that I was able to mix my landscaping knowledge with 3D design. I take pride in building a company where great customer service and creating beautiful landscapes are at the forefront.</p>
+                </div>
+                
+                <h3>Our Approach</h3>
+                <p>At YARD GUARD LANDSCAPING, we believe that every outdoor space has unique potential. Our comprehensive approach combines traditional landscaping expertise with modern design techniques to create spaces that are both beautiful and functional. We understand that your outdoor space is an extension of your home, and we treat each project with the attention to detail it deserves.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <h2 class="section-title">WHY CHOOSE US</h2>
+        <h3 class="section-subtitle">Experience the Difference</h3>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4>Design Excellence</h4>
+                <p>Professional 3D design visualization for your project</p>
+            </div>
+            <div class="feature-card">
+                <h4>Expert Team</h4>
+                <p>15+ years of landscaping experience in the GTA</p>
+            </div>
+            <div class="feature-card">
+                <h4>Customer Focus</h4>
+                <p>Dedicated to exceeding your expectations on every project</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <h2>Our Design & Installation Process</h2>
+        <p>We believe in a comprehensive approach to landscaping that ensures every project is completed to the highest standards. Our process combines expert knowledge with modern design technology to create outdoor spaces that you'll love for years to come.</p>
+        
+        <h3>Our Commitment</h3>
+        <ul class="process-list">
+            <li><strong>Professional Design:</strong> 3D visualization of your project before we begin</li>
+            <li><strong>Expert Installation:</strong> Skilled team with extensive landscaping experience</li>
+            <li><strong>Quality Materials:</strong> Premium products for lasting beauty</li>
+            <li><strong>Custom Solutions:</strong> Designs tailored to your specific space and needs</li>
+            <li><strong>Detailed Maintenance:</strong> Professional yard maintenance services</li>
+        </ul>
+        <p>Let us help you transform your outdoor space into the landscape of your dreams!</p>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Transform Your Yard?</h2>
+        <p>Contact us today for a consultation and free quote on your landscaping project.</p>
+        <a href="#" class="get-quote-btn">Get Quote</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.avif" alt="Yard Guard Landscaping" style="height: 50px; width: auto;">
+            </div>
+            <div class="footer-about">
+                <h3>ABOUT US</h3>
+                <p>With over 15 years of experience in the GTA, we bring expert knowledge in landscape design and maintenance. Our team is dedicated to delivering top-notch quality and customer satisfaction with every project.</p>
+            </div>
+            <div class="footer-links">
+                <h3>INFORMATION LINKS</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="residential.html">Residential Services</a></li>
+                    <li><a href="commercial.html">Commercial Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>CONTACT US</h3>
+                <p>Address: Toronto, ON</p>
+                <p>Phone: <a href="tel:6472167787">(647) 216-7787</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Handle dropdown menu on mobile
+        document.querySelector('.dropdown > a').addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle('active');
+            }
+        });
+    </script>
+</body>
+</html>
